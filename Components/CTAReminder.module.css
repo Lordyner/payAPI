@@ -1,0 +1,14 @@
+.CTAReminder {
+    background-color: #F0F0F0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--topAndBotPadding) var(--sidePadding);
+    justify-content: center;
+    align-items: center;
+    min-height: auto;
+    margin-bottom: 2rem;
+}
+
+.CTAReminder h2 {
+    text-align: center;
+}

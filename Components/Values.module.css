@@ -1,0 +1,151 @@
+.valueSection {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 3rem 0;
+}
+
+.value {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: left;
+}
+
+.valueContent.fromRight {
+    align-self: flex-end;
+}
+
+.title {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+}
+
+.icon {
+    width: 3rem;
+    height: 3rem;
+    font-weight: 900;
+    position: absolute;
+    right: 5rem;
+    bottom: -2rem;
+}
+
+.valueContent {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: var(--secondary-color);
+    width: 70%;
+}
+
+.valueContent.fromLeft {
+    box-shadow: 19px 11px 18px -15px rgba(0, 0, 0, 0.1);
+    border-top-right-radius: 6rem;
+    border-bottom-right-radius: 6rem;
+}
+
+.valueContent.fromRight {
+    box-shadow: -19px 11px 18px -15px rgba(0, 0, 0, 0.1);
+    border-top-left-radius: 6rem;
+    border-bottom-left-radius: 6rem;
+}
+
+.valueText {
+    max-width: 80%;
+    padding: 4rem 2rem;
+
+}
+
+
+.value:nth-child(even) {
+    text-align: right;
+}
+
+.valueContent.primaryColor {
+    background-color: var(--primary-color);
+}
+
+.valueContent.secondaryColor {
+    background-color: var(--secondary-color);
+}
+
+.valueContent.tertiaryColor {
+    background-color: var(--tertiary-color);
+
+}
+
+.valueImg {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+
+    .valueSection {
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+        gap: 10rem;
+    }
+
+    .valueContent {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        position: relative;
+        width: 90%;
+    }
+
+    .valueContent:nth-child(even) {
+        justify-items: flex-start;
+    }
+
+    .icons {
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .statSvg {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        align-items: center;
+    }
+
+    .valueText {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .valueText p {
+        text-align: center;
+    }
+
+    .imgWrapper {
+        position: relative;
+        display: flex;
+        padding-left: var(--sidePadding);
+    }
+
+    .imgWrapper.fromRight {
+        padding-right: var(--sidePadding);
+    }
+
+    .imgWrapper img {
+        height: auto;
+        position: relative;
+    }
+
+
+
+}
+
+@media screen and (min-width: 1440px) {}
+
+@media screen and (min-width: 1800px) {}

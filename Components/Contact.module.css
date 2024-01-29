@@ -1,0 +1,169 @@
+.contactSection {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: var(--topAndBotPadding) 0;
+    background-color: white;
+    /* border-radius: 2rem; */
+    margin-bottom: 1rem;
+    /* box-shadow: 0px -3px 10px 0px rgba(0, 0, 0, 0.1); */
+}
+
+.contactSection input,
+.contactSection textarea {
+    border: none;
+    border-radius: 0;
+    color: #0b2036;
+    border-bottom: 1px solid #ccc;
+    background-color: inherit;
+}
+
+.contactSection input:focus,
+.contactSection textarea:focus {
+    border-bottom: 1px solid var(--black);
+    outline: none;
+}
+
+.contactSection input::placeholder,
+.contactSection textarea::placeholder {
+    color: #ccc;
+}
+
+.contactSection label {
+    visibility: hidden;
+}
+
+.contactSection h2 {
+    color: var(--black);
+    text-align: center;
+}
+
+.meeting button {
+    text-transform: unset;
+}
+
+
+.formWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding: 0 var(--sidePadding);
+}
+
+.separation {
+    margin-top: .75rem;
+    border-top: 1px solid #ccc;
+
+}
+
+.meeting label {
+    color: var(--form-field);
+    font-size: var(--body-400);
+}
+
+
+.buttonWrapper {
+    padding-top: 4rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+
+.form {
+    padding-top: 1rem;
+}
+
+.formGroup {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: .25rem
+}
+
+.fieldsWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    /* align-items: center; */
+}
+
+.meeting h1 {
+    color: var(--black);
+    text-transform: unset;
+}
+
+.meeting p {
+    font-size: var(--body-500);
+}
+
+.meeting img {
+    /* object-fit: contain; */
+    margin: auto;
+    object-fit: cover;
+    max-width: 100%;
+    border-radius: 10rem 10rem 10px 10px;
+}
+
+.map {
+    align-self: center;
+}
+
+@media screen and (min-width: 1024px) {
+    .formWrapper {
+        border-right: 1px solid #f0f0f0;
+
+    }
+
+    .fieldsWrapper {
+        margin: 0 auto;
+        max-width: 80%;
+    }
+
+    .contactInfo {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        align-items: center;
+    }
+
+    .contactInfo svg {
+        width: 3rem;
+        height: 3rem;
+        /* fill: var(--primary-color); */
+    }
+
+    .contactInfoWrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding-top: var(--topAndBotPadding);
+        gap: 3rem;
+    }
+
+    .contactInfoWrapper h3 {
+        color: #D0D0D0;
+        font-weight: normal;
+        font-size: var(--body-400);
+    }
+}
+
+
+@media screen and (min-width: 1440px) {
+    .contactInfoWrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 5rem;
+    }
+
+    .colorBg {
+        left: 4.5rem;
+        top: 5rem;
+    }
+
+    .fieldsWrapper {
+        max-width: 60%;
+        gap: 2rem;
+    }
+
+
+}
