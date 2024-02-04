@@ -1,6 +1,5 @@
 import React from 'react';
 import Spinner from './Spinner';
-import illustrationDev from '../public/images/illustration_dev.svg';
 import { useContext } from 'react';
 import GlobalContext from '@/Store/GlobalContext';
 const Overlay = () => {

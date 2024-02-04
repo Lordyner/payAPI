@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { SiGithub, SiLinkedin } from 'react-icons/si';
 import classes from './Footer.module.css';
-import logoTemplate from '@/public/images/logo_template.png';
+import logo from '@/public/images/shared/desktop/logo.svg';
 import Image from 'next/image';
 import GlobalContext from '@/Store/GlobalContext';
 import Link from 'next/link';
@@ -15,7 +15,7 @@ const Footer = () => {
                 {isMobileResolution &&
                     <div className={classes.valueProposition}>
 
-                        <Image src={logoTemplate} alt='logo auto-école' className={classes.logo} width={50} height={50} />
+                        <Image src={logo} alt='logo auto-école' className={classes.logo} width={50} height={50} />
                         <div>
                             <h2>Nom auto-école</h2>
                             <p>Value proposition auto-école</p>

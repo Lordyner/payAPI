@@ -1,5 +1,5 @@
 import React, { useContext, useRef } from 'react';
-import logoTemplate from '@/public/images/logo_template.png';
+import logo from '@/public/images/shared/desktop/logo.svg';
 import Image from 'next/image';
 import classes from './Navbar.module.css'
 import GlobalContext from '@/Store/GlobalContext';
@@ -15,17 +15,24 @@ const Navbar = () => {
     return (
         <nav className={classes.navbar}>
             <div className={classes.navWrapper}>
+
                 <div className={classes.logo}>
                     <Link href="/">
-                        <Image src={logoTemplate} alt='développeur thomas andré-lubin' className={classes.logoImg} width={50} height={50} />
+                        <Image src={logo} alt='logo payAPI' className={classes.logoImg} />
                     </Link>
                 </div>
                 {/* Classic links */}
                 <div className={`${isMobileResolution ? "display-none" : classes.navLink}`}>
-                    <Link href="" className={classes.link}>Permis voiture</Link>
-                    <Link href="" className={classes.link}>Code de la route</Link>
-                    <Link href="" className={classes.link}>Permis moto</Link>
+                    <Link href="" className={classes.link}>Pricing</Link>
+                    <Link href="" className={classes.link}>About</Link>
+                    <Link href="" className={classes.link}>Contact</Link>
                 </div>
+
+                <div className={`${isMobileResolution ? "display-none" : ""}`}>
+
+                    <button className='primary-button'>Schedule a demo</button>
+                </div>
+
 
                 {/* Burger menu */}
                 <div ref={burger} className={`${isMobileResolution ? classes.hamburger : classes.hamburger + " display-none"}`}
@@ -39,20 +46,23 @@ const Navbar = () => {
 
                 {/* Mobile menu */}
                 <div className={`${classes.mobileNav} ${isMenuOpen ? classes.active : ""}`}>
-                    <Link href="" className={classes.mobileLink} onClick={() => {
-                        toggleMenu();
-                        burger.current.classList.toggle(classes.isActive);
-                    }}>Permis voiture</Link>
+                    <div className={classes.mobileNavWrapper}>
+                        <Link href="" className={classes.mobileLink} onClick={() => {
+                            toggleMenu();
+                            burger.current.classList.toggle(classes.isActive);
+                        }}>Pricing</Link>
 
-                    <Link href="" className={classes.mobileLink} onClick={() => {
-                        toggleMenu();
-                        burger.current.classList.toggle(classes.isActive);
-                    }}>Code de la route</Link>
+                        <Link href="" className={classes.mobileLink} onClick={() => {
+                            toggleMenu();
+                            burger.current.classList.toggle(classes.isActive);
+                        }}>About</Link>
 
-                    <Link href="" className={classes.mobileLink} onClick={() => {
-                        toggleMenu();
-                        burger.current.classList.toggle(classes.isActive);
-                    }}>Permis moto</Link>
+                        <Link href="" className={classes.mobileLink} onClick={() => {
+                            toggleMenu();
+                            burger.current.classList.toggle(classes.isActive);
+                        }}>Contact</Link>
+                        <button className='primary-button'>Schedule a demo</button>
+                    </div>
                 </div>
             </div>
         </nav>

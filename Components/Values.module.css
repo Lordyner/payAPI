@@ -1,151 +1,165 @@
 .valueSection {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
-    padding: 3rem 0;
+    gap: 4rem;
+    min-height: 100svh;
+    padding: var(--topAndBotPadding) var(--sidePadding);
+    background-color: var(--background-color);
+    overflow-x: hidden;
 }
+
+
+.advantage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.advantage.simpleUX {
+    flex-direction: column-reverse;
+}
+
+.values {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    text-align: center;
+
+}
+
+.easyToImplementImg {
+    padding-top: 2rem;
+}
+
+.simpleUXImg {
+    padding-top: 4rem;
+}
+
+.imgAdvantages {
+    padding-left: 1rem;
+    transform: scale(1.3);
+}
+
+.imgWrapper {}
 
 .value {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    text-align: left;
-}
-
-.valueContent.fromRight {
-    align-self: flex-end;
-}
-
-.title {
-    display: flex;
-    gap: .5rem;
     align-items: center;
+    gap: 1rem;
+
 }
 
-.icon {
-    width: 3rem;
-    height: 3rem;
-    font-weight: 900;
-    position: absolute;
-    right: 5rem;
-    bottom: -2rem;
+.value h3 {
+
+    color: var(--secondary-color-1);
 }
 
-.valueContent {
-    position: relative;
+.valueSection h2 {
+    font-size: 2.25rem;
+    line-height: 2.25rem;
+    color: var(--secondary-color-1);
+}
+
+.valueSection img {
+    height: auto;
+}
+
+.content {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    background-color: var(--secondary-color);
-    width: 70%;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
 }
 
-.valueContent.fromLeft {
-    box-shadow: 19px 11px 18px -15px rgba(0, 0, 0, 0.1);
-    border-top-right-radius: 6rem;
-    border-bottom-right-radius: 6rem;
+.content.easyToImplement {
+    position: relative;
+    top: -1rem;
 }
 
-.valueContent.fromRight {
-    box-shadow: -19px 11px 18px -15px rgba(0, 0, 0, 0.1);
-    border-top-left-radius: 6rem;
-    border-bottom-left-radius: 6rem;
+.content p,
+.value p {
+    color: var(--secondary-color-2);
 }
 
-.valueText {
-    max-width: 80%;
-    padding: 4rem 2rem;
-
-}
-
-
-.value:nth-child(even) {
-    text-align: right;
-}
-
-.valueContent.primaryColor {
-    background-color: var(--primary-color);
-}
-
-.valueContent.secondaryColor {
-    background-color: var(--secondary-color);
-}
-
-.valueContent.tertiaryColor {
-    background-color: var(--tertiary-color);
-
-}
-
-.valueImg {
-    width: 100%;
-    object-fit: cover;
-    border-radius: 1rem;
-}
-
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
 
     .valueSection {
-        padding-top: 10rem;
-        padding-bottom: 10rem;
-        gap: 10rem;
+        gap: 6rem;
     }
 
-    .valueContent {
+    .easyToImplementImg {
+        padding-left: 3.5rem;
+        transform: scale(1.2);
+    }
+
+    .simpleUXImg {
+        padding-top: 0;
+        padding-left: 2rem;
+        transform: scale(.9);
+    }
+
+    .valueSection h2 {
+        font-size: 3rem;
+        line-height: 3.5rem;
+    }
+
+    .content.easyToImplement {
+        position: relative;
+        top: -3rem;
+    }
+
+    .content.simpleUX {
+        position: relative;
+        top: -5rem;
+    }
+
+    .content p {
+        max-width: 70%;
+    }
+
+    .values {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        position: relative;
-        width: 90%;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: start;
     }
-
-    .valueContent:nth-child(even) {
-        justify-items: flex-start;
-    }
-
-    .icons {
-        display: flex;
-        gap: 2rem;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .statSvg {
-        display: flex;
-        flex-direction: column;
-        gap: .5rem;
-        align-items: center;
-    }
-
-    .valueText {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
-    }
-
-    .valueText p {
-        text-align: center;
-    }
-
-    .imgWrapper {
-        position: relative;
-        display: flex;
-        padding-left: var(--sidePadding);
-    }
-
-    .imgWrapper.fromRight {
-        padding-right: var(--sidePadding);
-    }
-
-    .imgWrapper img {
-        height: auto;
-        position: relative;
-    }
-
 
 
 }
 
-@media screen and (min-width: 1440px) {}
+@media screen and (min-width: 1024px) {}
+
+@media screen and (min-width: 1440px) {
+
+    .advantage {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-align: left;
+    }
+
+    .content p,
+    .content h2 {
+        text-align: left;
+    }
+
+    .imgAdvantages {
+        transform: unset;
+    }
+
+    .easyToImplementImg {
+        padding-left: 0;
+        transform: unset;
+        padding-top: 0;
+    }
+
+    .simpleUXImg {
+        padding-left: 0;
+        transform: unset;
+    }
+
+}
 
 @media screen and (min-width: 1800px) {}

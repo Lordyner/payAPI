@@ -10,7 +10,6 @@ export default function App({ Component, pageProps }) {
     <GlobalContextProvider>
       <Overlay />
       <Component {...pageProps} />
-      <Footer />
     </GlobalContextProvider >
   </>
 }
