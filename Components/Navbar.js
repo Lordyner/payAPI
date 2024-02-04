@@ -16,19 +16,17 @@ const Navbar = () => {
         <nav className={classes.navbar}>
             <div className={classes.navWrapper}>
 
-                {/* <div className={classes.logo}>
+                <div className={classes.logo}>
                     <Link href="/">
                         <Image src={logo} alt='logo payAPI' className={classes.logoImg} />
                     </Link>
-                </div> */}
+                </div>
                 {/* Classic links */}
                 <div className={`${isMobileResolution ? "display-none" : classes.navLink}`}>
-                    <Link href="/">
-                        <Image src={logo} alt='logo payAPI' className={classes.logoImg} />
-                    </Link>
+
                     <Link href="/pricing" className={classes.link}>Pricing</Link>
-                    <Link href="" className={classes.link}>About</Link>
-                    <Link href="" className={classes.link}>Contact</Link>
+                    <Link href="/about" className={classes.link}>About</Link>
+                    <Link href="/contact" className={classes.link}>Contact</Link>
                 </div>
 
                 <div className={`${isMobileResolution ? "display-none" : ""}`}>
@@ -55,12 +53,12 @@ const Navbar = () => {
                             burger.current.classList.toggle(classes.isActive);
                         }}>Pricing</Link>
 
-                        <Link href="" className={classes.mobileLink} onClick={() => {
+                        <Link href="/about" className={classes.mobileLink} onClick={() => {
                             toggleMenu();
                             burger.current.classList.toggle(classes.isActive);
                         }}>About</Link>
 
-                        <Link href="" className={classes.mobileLink} onClick={() => {
+                        <Link href="/contact" className={classes.mobileLink} onClick={() => {
                             toggleMenu();
                             burger.current.classList.toggle(classes.isActive);
                         }}>Contact</Link>

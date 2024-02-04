@@ -17,8 +17,8 @@ const Footer = () => {
                 <Link href="/">
                     <Image src={logo} alt='logo payAPI' className={classes.logoImg} />
                 </Link>
-                <Link href="" className={classes.link}>Pricing</Link>
-                <Link href="" className={classes.link}>About</Link>
+                <Link href="/pricing" className={classes.link}>Pricing</Link>
+                <Link href="/about" className={classes.link}>About</Link>
                 <Link href="" className={classes.link}>Contact</Link>
             </div>
             <div className={classes.socialLinks}>
