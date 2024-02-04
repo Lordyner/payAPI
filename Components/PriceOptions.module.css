@@ -1,0 +1,43 @@
+.container {
+    min-width: 100%;
+    border-bottom: 1px solid #bfcbd5;
+    border-top: 1px solid #bfcbd5;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.options {
+    padding: 1.25rem 0;
+    text-align: left;
+
+}
+
+.options li.active::marker {
+    content: '✓';
+    color: var(--primary-color-1);
+    font-weight: bold;
+}
+
+.options li {
+    padding-left: 1rem;
+    opacity: .5;
+    list-style: none;
+
+}
+
+.options li.active {
+    color: var(--secondary-color-1);
+    opacity: 1;
+}
+
+@media screen and (min-width: 1440px) {
+    .container {
+        align-items: flex-start;
+    }
+
+    .options {
+        padding-left: 1rem;
+    }
+}

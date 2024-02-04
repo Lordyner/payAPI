@@ -53,7 +53,7 @@
 }
 
 .value h3 {
-
+    font-size: 1.125rem;
     color: var(--secondary-color-1);
 }
 
@@ -158,6 +158,14 @@
     .simpleUXImg {
         padding-left: 0;
         transform: unset;
+    }
+
+    .content {
+        align-items: unset;
+    }
+
+    .value p {
+        max-width: 70%;
     }
 
 }

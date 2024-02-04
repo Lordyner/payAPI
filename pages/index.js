@@ -13,6 +13,7 @@ import CTAReminder from '@/Components/CTAReminder'
 import Image from 'next/image'
 import bgCircle from '@/public/images/shared/desktop/bg-pattern-circle.svg'
 import Client from '@/Components/Client'
+import Footer from '@/Components/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -78,6 +79,7 @@ export default function Home({ reviews, mapBase64 }) {
       </main>
       <Client />
       <Values />
+      <Footer />
     </>
   )
 }

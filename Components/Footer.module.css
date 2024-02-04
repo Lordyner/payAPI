@@ -1,137 +1,72 @@
 .footer {
-    background-color: #F0F0F0;
-    color: var(--black);
-    padding: var(--topAndBotPadding) var(--sidePadding);
-    font-size: var(--body-400);
-}
-
-.footer h2 {
-    color: var(--black);
-    font-size: var(--heading-500);
-
-}
-
-.valueProposition {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    grid-template-columns: auto 1fr;
-    gap: .75rem;
+    gap: 2.5rem;
 
-}
+    padding: var(--topAndBotPadding) var(--sidePadding);
 
-.footer button {
-    font-size: var(--body-400);
-}
+    background-color: var(--secondary-color-3);
+    color: var(--primary-color-2);
 
-.footer a {
-
-    color: var(--black);
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.logo {
-    border-radius: 90px;
-    width: 3.125rem;
-    height: 3.125rem;
-    transition: 0.1s ease-in-out;
-}
-
-
-.classicLinks {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.linkContainer {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: space-between;
-    gap: 3rem;
-    align-items: flex-end;
-}
-
-
-.topLinks {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.separator {
-    width: 100%;
-    border-bottom: 1px solid var(--black);
-}
-
-.icon svg {
-    font-size: 1.5rem;
 }
 
 .socialLinks {
     display: flex;
-    flex-direction: column;
-    align-self: flex-start;
+    flex-direction: row;
     gap: 2rem;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    font-weight: bold;
+}
+
+.link {
+    opacity: .7;
+}
+
+.link:hover {
+    opacity: 1;
+}
+
+.links a,
+.socialLinks a {
+    color: var(--primary-color-2);
+}
+
+.socialLinks a:hover {
+    color: var(--primary-color-1);
 }
 
 @media screen and (min-width: 768px) {
 
-    .container {
-        display: flex;
+    .footer,
+    .links {
         flex-direction: row;
+    }
+
+    .footer {
+        align-items: center;
         justify-content: space-between;
     }
 
-    .imageAndNameContainer {
-        display: flex;
-        flex-direction: column;
-        gap: .75rem;
-
-        align-items: center;
-    }
-
-    .valueProposition {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-
-
-    .linkContainer {
-        display: flex;
-        flex-direction: row;
-        gap: 3rem;
-    }
-
-    .topLinks {
-        border-bottom: none;
-    }
-
     .socialLinks {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        gap: 2rem;
+        align-items: center;
     }
 
-    .icon svg {
-        font-size: 2rem;
-    }
+    .links {
+        gap: 3.5rem;
 
-
-    .logo {
-        width: 6rem;
-        height: 6rem;
-    }
-
-
-    .classicLinks {
-        flex-direction: column;
     }
 
 }
+
+@media screen and (min-width: 1024px) {}
+
+@media screen and (min-width: 1440px) {}

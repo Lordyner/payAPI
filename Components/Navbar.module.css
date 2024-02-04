@@ -6,7 +6,7 @@
 .navWrapper {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
     gap: 1rem;
     align-items: center;
     padding-bottom: 2rem;
@@ -18,9 +18,14 @@ a.link {
     justify-content: center;
     align-items: center;
     gap: 3rem;
-    color: var(--secondary-color-2);
+    color: var(--secondary-color-1);
+    opacity: .7;
     font-weight: bold;
     font-size: 0.938rem;
+}
+
+a.link:hover {
+    opacity: 1;
 }
 
 .navLink {
@@ -75,7 +80,6 @@ a.link {
     align-items: center;
     gap: 2rem;
     border-top: 1px solid #404b56;
-
     padding-top: 2rem;
 }
 
@@ -86,8 +90,6 @@ a.link {
     letter-spacing: .6px;
     font-size: 1.25rem;
     opacity: .7;
-
-
 }
 
 
@@ -149,10 +151,16 @@ a.link {
 }
 
 @media (min-width: 768px) {
+    .navWrapper {
+        justify-content: space-between;
+
+    }
 
     .hamburger {
         display: none;
     }
+
+
 }
 
 @media (min-width: 1024px) {

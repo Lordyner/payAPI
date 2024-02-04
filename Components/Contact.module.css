@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: 1fr;
     padding: var(--topAndBotPadding) 0;
-    background-color: white;
+    background-color: inherit;
     /* border-radius: 2rem; */
     margin-bottom: 1rem;
     /* box-shadow: 0px -3px 10px 0px rgba(0, 0, 0, 0.1); */
