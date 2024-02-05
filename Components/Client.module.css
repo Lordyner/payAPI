@@ -9,19 +9,6 @@
     background: var(--secondary-color-3);
 }
 
-.clientsLogoWrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    align-items: center;
-    justify-items: center;
-}
-
-/* .clientsLogoWrapper img {
-    width: 5rem;
-    height: 5rem;
-} */
-
 .content {
     display: flex;
     flex-direction: column;
@@ -34,19 +21,14 @@
     opacity: .7;
 }
 
-.clientsLogoWrapper svg {
-    background-color: var(--primary-color-2);
-}
+
 
 .clientSection h2 {
     font-size: 2rem;
 }
 
 @media (min-width: 768px) {
-    .clientsLogoWrapper {
-        grid-template-columns: 1fr 1fr 1fr;
 
-    }
 
     .clientSection h2 {
         font-size: 3rem;

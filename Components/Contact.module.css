@@ -1,168 +1,252 @@
-.contactSection {
-    display: grid;
-    grid-template-columns: 1fr;
-    padding: var(--topAndBotPadding) 0;
-    background-color: inherit;
-    /* border-radius: 2rem; */
-    margin-bottom: 1rem;
-    /* box-shadow: 0px -3px 10px 0px rgba(0, 0, 0, 0.1); */
-}
-
-.contactSection input,
-.contactSection textarea {
-    border: none;
-    border-radius: 0;
-    color: #0b2036;
-    border-bottom: 1px solid #ccc;
-    background-color: inherit;
-}
-
-.contactSection input:focus,
-.contactSection textarea:focus {
-    border-bottom: 1px solid var(--black);
-    outline: none;
-}
-
-.contactSection input::placeholder,
-.contactSection textarea::placeholder {
-    color: #ccc;
-}
-
-.contactSection label {
-    visibility: hidden;
-}
-
-.contactSection h2 {
-    color: var(--black);
-    text-align: center;
-}
-
-.meeting button {
-    text-transform: unset;
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 
 .formWrapper {
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
-    padding: 0 var(--sidePadding);
-}
-
-.separation {
-    margin-top: .75rem;
-    border-top: 1px solid #ccc;
-
-}
-
-.meeting label {
-    color: var(--form-field);
-    font-size: var(--body-400);
-}
-
-
-.buttonWrapper {
-    padding-top: 4rem;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 1rem;
-    justify-content: center;
-}
-
-
-.form {
-    padding-top: 1rem;
+    padding-bottom: 3rem;
 }
 
 .formGroup {
     display: flex;
     width: 100%;
     flex-direction: column;
-    gap: .25rem
+    gap: .25rem;
+    position: relative;
+}
+
+.formWrapper input:placeholder-shown {
+    border-bottom: 1px solid rgb(54, 83, 107, 0.5) !important;
+}
+
+.formWrapper input,
+.formWrapper textarea {
+    border: none;
+    border-radius: 0;
+    color: #0b2036;
+    border-bottom: 1px solid rgb(54, 83, 107, 0.5);
+    opacity: .5s;
+    background-color: inherit;
+    cursor: pointer;
+    position: relative;
+}
+
+.formWrapper input:focus,
+.formWrapper textarea:focus {
+    border-bottom: 1px solid var(--secondary-color-1);
+    outline: none;
+}
+
+.formWrapper input::placeholder,
+.formWrapper textarea::placeholder {
+    color: var(--secondary-color-1);
+    opacity: .5;
+    padding-left: 1rem;
+}
+
+.formWrapper input:invalid,
+.formWrapper textarea:invalid {
+    border-color: #FF0000;
+}
+
+.formWrapper input::placeholder:invalid,
+.formWrapper textarea::placeholder:invalid {
+    color: #FF0000;
+}
+
+/* Style du texte d'erreur */
+.formWrapper input:invalid+.errorMessage::after input:not(:placeholder-shown),
+.formWrapper input:invalid+.errorMessageMail::after input:not(:placeholder-shown),
+.formWrapper textarea:invalid+.errorMessage::after textarea:not(:placeholder-shown) {
+    content: "This field can't be empty.";
+    display: block;
+    color: red;
+    font-size: 12px;
+    position: absolute;
+    bottom: -1.5rem;
+    left: 1rem;
+}
+
+.formWrapper input:invalid+.errorMessageMail::after input:not(:placeholder-shown) {
+
+    content: "This field can't be empty and should be a valid mail.";
+}
+
+.formWrapper input:invalid::after,
+.formWrapper textarea:invalid::after {
+    content: 'Lala';
+    position: absolute;
+    right: 0;
 }
 
 .fieldsWrapper {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    /* align-items: center; */
 }
 
-.meeting h1 {
-    color: var(--black);
-    text-transform: unset;
+.container h1,
+.container h2 {
+    text-align: center;
 }
 
-.meeting p {
-    font-size: var(--body-500);
+.container h1 {
+    font-size: 2rem;
+    padding-top: 2rem;
 }
 
-.meeting img {
-    /* object-fit: contain; */
-    margin: auto;
-    object-fit: cover;
-    max-width: 100%;
-    border-radius: 10rem 10rem 10px 10px;
+.container h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: var(--secondary-color-1);
+    opacity: .75;
 }
 
-.map {
-    align-self: center;
+.formGroup label {
+    visibility: hidden;
+}
+
+.buttonWrapper button {
+    min-width: 50%;
+}
+
+/* Custom checkbox */
+/* Customize the label (the container) */
+.checkBoxContainer {
+    display: block;
+    position: relative;
+    padding-left: 2.5rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+
+.checkBoxContainer {
+    color: var(--secondary-color-1);
+    font-size: 1rem;
+}
+
+.checkBoxContainer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.clients {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Create a custom checkbox */
+.checkMark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1.563rem;
+    width: 1.563rem;
+    background-color: var(--secondary-color-1);
+    opacity: .25;
+}
+
+/* On mouse-over, add a grey background color */
+.checkBoxContainer:hover input~.checkMark {
+    background-color: var(--secondary-color-1);
+    opacity: .25;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkBoxContainer input:checked~.checkMark {
+    background-color: var(--primary-color-1);
+    opacity: 1;
+}
+
+/* Create the checkMark/indicator (hidden when not checked) */
+.checkMark::after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkMark when checked */
+.checkBoxContainer input:checked~.checkMark::after {
+    display: block;
+}
+
+/* Style the checkMark/indicator */
+.checkBoxContainer .checkMark::after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid var(--primary-color-2);
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+@media screen and (min-width: 768px) {
+    .formWrapper {
+        justify-items: center;
+    }
+
+    .container {}
+
+    .container h1 {
+        font-size: 3rem;
+        line-height: 3.5rem;
+        max-width: 90%;
+        align-self: center;
+    }
 }
 
 @media screen and (min-width: 1024px) {
-    .formWrapper {
-        border-right: 1px solid #f0f0f0;
 
-    }
 
-    .fieldsWrapper {
-        margin: 0 auto;
-        max-width: 80%;
-    }
+    .container h1 {
 
-    .contactInfo {
-        display: flex;
-        flex-direction: column;
-        gap: .5rem;
-        align-items: center;
-    }
-
-    .contactInfo svg {
-        width: 3rem;
-        height: 3rem;
-        /* fill: var(--primary-color); */
-    }
-
-    .contactInfoWrapper {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        padding-top: var(--topAndBotPadding);
-        gap: 3rem;
-    }
-
-    .contactInfoWrapper h3 {
-        color: #D0D0D0;
-        font-weight: normal;
-        font-size: var(--body-400);
+        max-width: 70%;
     }
 }
 
-
 @media screen and (min-width: 1440px) {
-    .contactInfoWrapper {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        gap: 5rem;
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 
-    .colorBg {
-        left: 4.5rem;
-        top: 5rem;
+    .formWrapper {
+        justify-items: flex-start;
     }
 
-    .fieldsWrapper {
-        max-width: 60%;
-        gap: 2rem;
+    .clients {
+        align-self: center;
+    }
+
+    .container h1 {
+        font-size: 3.625rem;
+        line-height: 3.625rem;
+        text-align: left;
+        max-width: none;
+    }
+
+    .container h2 {
+        text-align: left;
     }
 
 

@@ -1,0 +1,18 @@
+.clientsLogoWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    justify-items: center;
+}
+
+.clientsLogoWrapper svg {
+    background-color: var(--primary-color-2);
+}
+
+@media (min-width: 768px) {
+    .clientsLogoWrapper {
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: flex-start;
+    }
+}
