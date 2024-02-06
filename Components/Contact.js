@@ -101,7 +101,7 @@ const Contact = () => {
                         </div>
                         <label className={classes.checkBoxContainer}>
                             Stay up-to-date with company announcements and updates to our API
-                            <input type="checkbox" checked={receiveCompanyAnnouncements} onClick={() => setReceiveCompanyAnnouncements(!receiveCompanyAnnouncements)} />
+                            <input type="checkbox" checked={receiveCompanyAnnouncements} onChange={() => setReceiveCompanyAnnouncements(!receiveCompanyAnnouncements)} />
                             <span className={classes.checkMark}></span>
                         </label>
                     </div>

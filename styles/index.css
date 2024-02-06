@@ -25,6 +25,7 @@
     /* Padding */
     --sidePadding: 1.5rem;
     --topAndBotPadding: 2rem;
+    --circle-size: 60vw;
 }
 
 /* Titles */
@@ -128,6 +129,12 @@ body {
     scroll-behavior: smooth;
     font-size: var(--body-500);
     line-height: 1.75rem;
+    background-image: url('../public/images/shared/desktop/bg-pattern-circle.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+    position: relative;
+    z-index: 10;
 
 }
 
@@ -364,7 +371,7 @@ main {
 }
 
 
-/* main.home {
+main.home {
 
     position: relative;
     z-index: 10;
@@ -373,7 +380,7 @@ main {
     background-size: cover;
     background-size: cover;
     background-position: -14rem -41rem;
-} */
+}
 
 /* main.home::before {
     content: '';

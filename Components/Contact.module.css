@@ -77,13 +77,6 @@
     content: "This field can't be empty and should be a valid mail.";
 }
 
-.formWrapper input:invalid::after,
-.formWrapper textarea:invalid::after {
-    content: 'Lala';
-    position: absolute;
-    right: 0;
-}
-
 .fieldsWrapper {
     display: flex;
     flex-direction: column;
