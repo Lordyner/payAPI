@@ -73,8 +73,8 @@ export default function Home({ reviews, mapBase64 }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={`overlay-burger-menu ${isMenuOpen ? 'isActive' : ''}`} />
+      <Navbar />
       <main className='home'>
-        <Navbar />
         <Hero />
       </main>
       <Client />

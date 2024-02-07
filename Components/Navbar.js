@@ -13,60 +13,62 @@ const Navbar = () => {
     const { isMenuOpen, setIsMenuOpen } = useContext(GlobalContext);
     const { toggleMenu } = useContext(GlobalContext);
     return (
-        <nav className={classes.navbar}>
-            <div className={classes.navWrapper}>
+        <header className={classes.header}>
+            <nav className={classes.navbar}>
+                <div className={classes.navWrapper}>
 
-                <div className={classes.logo}>
-                    <Link href="/">
-                        <Image src={logo} alt='logo payAPI' className={classes.logoImg} />
-                    </Link>
-                </div>
-                {/* Classic links */}
-                <div className={`${isMobileResolution ? "display-none" : classes.navLink}`}>
+                    <div className={classes.logo}>
+                        <Link href="/">
+                            <Image src={logo} alt='logo payAPI' className={classes.logoImg} />
+                        </Link>
+                    </div>
+                    {/* Classic links */}
+                    <div className={`${isMobileResolution ? "display-none" : classes.navLink}`}>
 
-                    <Link href="/pricing" className={classes.link}>Pricing</Link>
-                    <Link href="/about" className={classes.link}>About</Link>
-                    <Link href="/contact" className={classes.link}>Contact</Link>
-                </div>
+                        <Link href="/pricing" className={classes.link}>Pricing</Link>
+                        <Link href="/about" className={classes.link}>About</Link>
+                        <Link href="/contact" className={classes.link}>Contact</Link>
+                    </div>
 
-                <div className={`${isMobileResolution ? "display-none" : ""}`}>
+                    <div className={`${isMobileResolution ? "display-none" : ""}`}>
 
-                    <button className='primary-button'>Schedule a demo</button>
-                </div>
-
-
-                {/* Burger menu */}
-                <div ref={burger} className={`${isMobileResolution ? classes.hamburger : classes.hamburger + " display-none"}`}
-                    onClick={() => {
-                        toggleMenu();
-                        burger.current.classList.toggle(classes.isActive);
-
-                    }}>
-                    <div className={classes.bar} />
-                </div>
-
-                {/* Mobile menu */}
-                <div className={`${classes.mobileNav} ${isMenuOpen ? classes.active : ""}`}>
-                    <div className={classes.mobileNavWrapper}>
-                        <Link href="/pricing" className={classes.mobileLink} onClick={() => {
-                            toggleMenu();
-                            burger.current.classList.toggle(classes.isActive);
-                        }}>Pricing</Link>
-
-                        <Link href="/about" className={classes.mobileLink} onClick={() => {
-                            toggleMenu();
-                            burger.current.classList.toggle(classes.isActive);
-                        }}>About</Link>
-
-                        <Link href="/contact" className={classes.mobileLink} onClick={() => {
-                            toggleMenu();
-                            burger.current.classList.toggle(classes.isActive);
-                        }}>Contact</Link>
                         <button className='primary-button'>Schedule a demo</button>
                     </div>
+
+
+                    {/* Burger menu */}
+                    <div ref={burger} className={`${isMobileResolution ? classes.hamburger : classes.hamburger + " display-none"}`}
+                        onClick={() => {
+                            toggleMenu();
+                            burger.current.classList.toggle(classes.isActive);
+
+                        }}>
+                        <div className={classes.bar} />
+                    </div>
+
+                    {/* Mobile menu */}
+                    <div className={`${classes.mobileNav} ${isMenuOpen ? classes.active : ""}`}>
+                        <div className={classes.mobileNavWrapper}>
+                            <Link href="/pricing" className={classes.mobileLink} onClick={() => {
+                                toggleMenu();
+                                burger.current.classList.toggle(classes.isActive);
+                            }}>Pricing</Link>
+
+                            <Link href="/about" className={classes.mobileLink} onClick={() => {
+                                toggleMenu();
+                                burger.current.classList.toggle(classes.isActive);
+                            }}>About</Link>
+
+                            <Link href="/contact" className={classes.mobileLink} onClick={() => {
+                                toggleMenu();
+                                burger.current.classList.toggle(classes.isActive);
+                            }}>Contact</Link>
+                            <button className='primary-button'>Schedule a demo</button>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </header>
     );
 };
 
