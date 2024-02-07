@@ -1,13 +1,16 @@
 .footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2.5rem;
 
     padding: var(--topAndBotPadding) var(--sidePadding);
 
     background-color: var(--secondary-color-3);
     color: var(--primary-color-2);
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
 
 }
 
@@ -46,12 +49,13 @@
 
 @media screen and (min-width: 768px) {
 
-    .footer,
+    .wrapper,
     .links {
         flex-direction: row;
     }
 
-    .footer {
+
+    .wrapper {
         align-items: center;
         justify-content: space-between;
     }

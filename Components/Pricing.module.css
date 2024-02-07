@@ -14,7 +14,7 @@
 
 .pricingSection h1 {
     text-align: center;
-    font-size: 2rem;
+    font-size: var(--heading-800);
 }
 
 @media screen and (min-width: 768px) {
@@ -27,6 +27,7 @@
     }
 
     .pricingSection h1 {
+        font-size: var(--heading-800);
         text-align: left;
         font-size: 3rem;
     }
@@ -39,4 +40,8 @@
 
 @media screen and (min-width: 1024px) {}
 
-@media screen and (min-width: 1440px) {}
+@media screen and (min-width: 1440px) {
+    .pricingSection h1 {
+        font-size: var(--heading-800);
+    }
+}

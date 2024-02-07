@@ -13,23 +13,23 @@ const Navbar = () => {
     const { isMenuOpen, setIsMenuOpen } = useContext(GlobalContext);
     const { toggleMenu } = useContext(GlobalContext);
     return (
-        <header className={classes.header}>
+        <header className={`${classes.header} max-width`}>
             <nav className={classes.navbar}>
                 <div className={classes.navWrapper}>
+                    <div className='d-flex gap-4 align-items-center'>
+                        <div className={classes.logo}>
+                            <Link href="/">
+                                <Image src={logo} alt='logo payAPI' className={classes.logoImg} />
+                            </Link>
+                        </div>
+                        {/* Classic links */}
+                        <div className={`${isMobileResolution ? "display-none" : classes.navLink}`}>
 
-                    <div className={classes.logo}>
-                        <Link href="/">
-                            <Image src={logo} alt='logo payAPI' className={classes.logoImg} />
-                        </Link>
+                            <Link href="/pricing" className={classes.link}>Pricing</Link>
+                            <Link href="/about" className={classes.link}>About</Link>
+                            <Link href="/contact" className={classes.link}>Contact</Link>
+                        </div>
                     </div>
-                    {/* Classic links */}
-                    <div className={`${isMobileResolution ? "display-none" : classes.navLink}`}>
-
-                        <Link href="/pricing" className={classes.link}>Pricing</Link>
-                        <Link href="/about" className={classes.link}>About</Link>
-                        <Link href="/contact" className={classes.link}>Contact</Link>
-                    </div>
-
                     <div className={`${isMobileResolution ? "display-none" : ""}`}>
 
                         <button className='primary-button'>Schedule a demo</button>

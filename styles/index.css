@@ -16,8 +16,8 @@
     --mobile: 375px;
 
     /* Fonts size */
-    --heading-900: 3.5rem;
-    --heading-800: 3rem;
+    --heading-900: 2rem;
+    --heading-800: 2rem;
     --heading-700: 1.125rem;
     --heading-600: 1.5rem;
     --body-500: 0.938rem;
@@ -58,6 +58,10 @@ h4 {
 
 @media screen and (min-width: 768px) {
     :root {
+
+        --heading-900: 3rem;
+        --heading-800: 3rem;
+
         /* Padding */
         --sidePadding: 2.5rem;
 
@@ -73,17 +77,13 @@ h4 {
 }
 
 @media screen and (min-width: 1440px) {
-    h1 {
-        font-size: 4.5rem;
-    }
 
-    h3 {
-        font-size: 2rem;
-    }
 
     :root {
         /* Fonts size */
         --heading-900: 4.5rem;
+        --heading-800: 3.5rem;
+
         --heading-700: 2rem;
 
 
@@ -129,14 +129,28 @@ body {
     scroll-behavior: smooth;
     font-size: var(--body-500);
     line-height: 1.75rem;
-    background-image: url('../public/images/shared/desktop/bg-pattern-circle.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 0 0;
     position: relative;
-    z-index: 10;
+    z-index: 15;
+    background-color: var(--background-color);
 
 }
+
+.bg-circle-home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    background-image: url('../public/images/shared/desktop/bg-pattern-circle.svg');
+    background-repeat: no-repeat;
+    background-position: center -64vh;
+
+}
+
+
+
 
 
 /* STYLE */
@@ -353,7 +367,7 @@ a {
     right: -100%;
     position: fixed;
     background-color: rgb(35, 31, 31, .3);
-    z-index: 90;
+    z-index: 30;
     overflow-y: hidden;
     transition: .4s ease-in-out;
 
@@ -365,22 +379,27 @@ a {
 
 
 main {
-    min-height: 100svh;
+    /* min-height: 100svh; */
     padding: var(--topAndBotPadding) var(--sidePadding);
     background-color: var(--background-color);
 }
 
-
-main.home {
-
-    position: relative;
-    z-index: 10;
-    background-image: url('../public/images/shared/desktop/bg-pattern-circle.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-size: cover;
-    background-position: -14rem -41rem;
+.circle {
+    position: absolute;
+    width: 50vw;
+    /* Largeur du cercle en pourcentage de la largeur de la vue */
+    height: 50vw;
+    /* Hauteur du cercle en pourcentage de la largeur de la vue */
+    bottom: 0;
+    /* Position du bas */
+    left: 50%;
+    /* Position centrée horizontalement */
+    transform: translateX(-50%);
+    /* Décalage de moitié de la largeur du cercle vers la gauche pour le centrer */
+    z-index: -1;
+    /* Assurez-vous que le cercle est positionné derrière le contenu */
 }
+
 
 /* main.home::before {
     content: '';
@@ -465,13 +484,25 @@ main.home {
     gap: 2rem;
 }
 
+.gap-4 {
+    gap: 4rem;
+}
+
 .gap-05 {
     gap: .5rem
 }
 
+.max-width {
+    max-width: 90rem;
+    margin-inline: auto;
+}
 
 .overflow-y-hidden {
     overflow-y: hidden;
+}
+
+.h-100 {
+    min-height: 100svh;
 }
 
 
@@ -490,19 +521,28 @@ main.home {
 
 ::-webkit-scrollbar-thumb {
     border-radius: .5rem;
-    /* background-color: #ad9ede; */
     background-color: #A0A0A0;
 }
 
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+    .bg-circle-home::before {
+        background-position: center -56vh;
+    }
+}
 
 @media (min-width: 1024px) {
+    .h-100 {
+        min-height: 100vh;
+    }
 
     main {
-        min-height: 100vh;
         padding: 0 var(--sidePadding);
     }
 
 }
 
-@media (min-width: 1440px) {}
+@media (min-width: 1440px) {
+    .bg-circle-home::before {
+        background-position: 54vw -14vh;
+    }
+}

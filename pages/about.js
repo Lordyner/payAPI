@@ -65,8 +65,8 @@ export default function AboutPage() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <div className={`overlay-burger-menu ${isMenuOpen ? 'isActive' : ''}`} />
+            <Navbar />
             <main>
-                <Navbar />
                 <About />
                 <CTAReminder />
 

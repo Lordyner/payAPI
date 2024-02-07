@@ -10,7 +10,7 @@ const Hero = () => {
     const { isLaptopResolution } = useContext(GlobalContext);
     const { isDesktopResolution } = useContext(GlobalContext);
     return (
-        <section id="hero" className={classes.heroContainer}>
+        <section id="hero" className={`${classes.heroContainer} max-width`}>
             <div className={classes.content}>
                 <h1>Start building with our APIs for absolutely free.</h1>
                 <div className={classes.heroCTA}>

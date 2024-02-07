@@ -1,12 +1,15 @@
 .clientSection {
+    padding: 5rem var(--sidePadding);
+    color: var(--primary-color-2);
+    background: var(--secondary-color-3);
+}
+
+.wrapper {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
     gap: 3.5rem;
 
-    padding: 5rem var(--sidePadding);
-    color: var(--primary-color-2);
-    background: var(--secondary-color-3);
 }
 
 .content {
@@ -42,9 +45,12 @@
 }
 
 @media (min-width: 1024px) {
-    .clientSection {
+
+
+    .wrapper {
         display: grid;
         grid-template-columns: 1fr 1fr;
+
     }
 
     .content {

@@ -64,8 +64,8 @@ export default function ContactPage() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <div className={`overlay-burger-menu ${isMenuOpen ? 'isActive' : ''}`} />
+            <Navbar />
             <main>
-                <Navbar />
                 <Contact />
                 <CTAReminder />
 

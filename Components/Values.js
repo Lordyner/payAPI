@@ -15,7 +15,7 @@ const Values = () => {
     const { isDesktopResolution } = useContext(GlobalContext);
 
     return (
-        <section className={classes.valueSection}>
+        <section className={`${classes.valueSection} max-width`}>
             <div className={classes.advantages}>
                 <div className={classes.advantage}>
                     <div className={`${classes.imgWrapper} `}>
