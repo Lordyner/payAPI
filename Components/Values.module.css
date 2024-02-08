@@ -31,10 +31,7 @@
     align-items: center;
     gap: 3rem;
     text-align: center;
-
 }
-
-
 
 .easyToImplementImg {
     box-shadow: 12px 12px 38px 7px rgba(0, 0, 0, 0.1);
@@ -107,6 +104,28 @@
 @media screen and (min-width: 1024px) {}
 
 @media screen and (min-width: 1440px) {
+
+    .simpleUXImg {
+        position: relative;
+        z-index: 10;
+    }
+
+    .bgCircle {
+        position: relative;
+    }
+
+    .bgCircle::before {
+        content: '';
+        position: absolute;
+        top: -40%;
+        right: -34rem;
+        width: 50vw;
+        height: 48.75rem;
+        z-index: 1;
+        background-image: url(/_next/static/media/bg-pattern-circle.96abc064.svg);
+        background-repeat: no-repeat;
+        background-position: 0rem
+    }
 
     .advantage {
         display: grid;

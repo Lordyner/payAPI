@@ -13,6 +13,9 @@ import CTAReminder from './CTAReminder';
 
 const Values = () => {
 
+    const { isLaptopResolution } = useContext(GlobalContext);
+    const { isDesktopResolution } = useContext(GlobalContext);
+
     return (
         <section className={`${classes.valueSection} max-width`}>
             <div className={classes.advantages}>
@@ -30,7 +33,7 @@ const Values = () => {
                         <h2>Simple UI & UX</h2>
                         <p>Our pre-built form is easy to integrate in your app or website&mdash;no matter your tech stack. We&apos;ve focused on creating a payment checkout experience that works for every user.</p>
                     </div>
-                    <div className={`${classes.imgWrapper} `}>
+                    <div className={`${classes.imgWrapper} ${classes.bgCircle}`}>
                         <Image src={simpleUi} className={`${classes.imgAdvantages} ${classes.simpleUXImg}`} alt='simple ui' />
                     </div>
                 </div>
