@@ -3,7 +3,7 @@ import classes from './CTAReminder.module.css';
 
 const CTAReminder = () => {
     return (
-        <div className={`${classes.callToAction} max-width`}>
+        <div className={`${classes.callToAction}`}>
             <div className={classes.wrapper}>
                 <h2>Ready to start?</h2>
                 <div className={classes.component}>
