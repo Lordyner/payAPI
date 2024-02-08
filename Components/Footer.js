@@ -10,8 +10,8 @@ const Footer = () => {
 
     const { isMobileResolution } = useContext(GlobalContext)
     return (
-        <footer className={`${classes.footer} `}>
-            <div className={classes.wrapper}>
+        <footer className={`${classes.footer}`}>
+            <div className={`${classes.wrapper} max-width`}>
                 <div className={`${classes.links}`}>
                     <Link href="/">
                         <Image src={logo} alt='logo payAPI' className={classes.logoImg} />

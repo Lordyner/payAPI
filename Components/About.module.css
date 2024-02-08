@@ -30,14 +30,18 @@
 }
 
 .numbers {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
+
     border-top: 1px solid #bfcbd5;
     border-bottom: 1px solid #bfcbd5;
     min-width: 100%;
     padding: 2rem 0;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
 }
 
 .number h3 {
@@ -79,10 +83,13 @@
     }
 
     .numbers {
+        border: none;
+    }
+
+    .wrapper {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
 
-        border: none;
     }
 
     .number {

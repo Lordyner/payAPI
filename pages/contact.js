@@ -65,7 +65,7 @@ export default function ContactPage() {
             </Head>
             <div className={`overlay-burger-menu ${isMenuOpen ? 'isActive' : ''}`} />
             <Navbar />
-            <main>
+            <main className='max-width'>
                 <Contact />
                 <CTAReminder />
 

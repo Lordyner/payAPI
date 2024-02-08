@@ -59,7 +59,7 @@ export default function PricingPage() {
             </Head>
             <div className={`overlay-burger-menu ${isMenuOpen ? 'isActive' : ''}`} />
             <Navbar />
-            <main className='home'>
+            <main className='max-width'>
                 <Pricing />
                 <CTAReminder />
             </main>

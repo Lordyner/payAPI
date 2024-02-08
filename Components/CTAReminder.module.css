@@ -1,4 +1,4 @@
-.callToAction,
+.wrapper,
 .component {
     display: flex;
     flex-direction: column;
@@ -42,7 +42,7 @@
 
 @media screen and (min-width: 768px) {
 
-    .callToAction {
+    .wrapper {
         flex-direction: column;
         gap: 2rem;
     }
@@ -81,11 +81,11 @@
 
 @media screen and (min-width: 1440px) {
 
-    .callToAction {
+    .wrapper {
         flex-direction: row;
         justify-content: space-between;
         margin: unset;
-        padding-bottom: 6rem;
+        padding-bottom: 3rem;
     }
 
     .component {

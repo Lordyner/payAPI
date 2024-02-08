@@ -28,18 +28,20 @@ const About = () => {
             {(isTabletResolution || isLaptopResolution) && <Image src={aboutImgTablet} alt='team members' />}
             {isDesktopResolution && <Image src={aboutImgDesktop} alt='team members' />}
 
-            <div className={classes.numbers}>
-                <div className={classes.number}>
-                    <p>Team members</p>
-                    <h3>300+</h3>
-                </div>
-                <div className={classes.number}>
-                    <p>Offices in the US</p>
-                    <h3>3</h3>
-                </div>
-                <div className={classes.number}>
-                    <p>Transactions analyzed</p>
-                    <h3>10M+</h3>
+            <div className={`${classes.numbers}`}>
+                <div className={`${classes.wrapper} max-width`}>
+                    <div className={classes.number}>
+                        <p>Team members</p>
+                        <h3>300+</h3>
+                    </div>
+                    <div className={classes.number}>
+                        <p>Offices in the US</p>
+                        <h3>3</h3>
+                    </div>
+                    <div className={classes.number}>
+                        <p>Transactions analyzed</p>
+                        <h3>10M+</h3>
+                    </div>
                 </div>
             </div>
             <div className={classes.aboutInfo}>
