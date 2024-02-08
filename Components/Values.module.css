@@ -8,12 +8,17 @@
     overflow-x: hidden;
 }
 
+.advantages {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+}
 
 .advantage {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .advantage.simpleUX {
@@ -29,20 +34,13 @@
 
 }
 
+
+
 .easyToImplementImg {
-    padding-top: 2rem;
+    box-shadow: 12px 12px 38px 7px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
-.simpleUXImg {
-    padding-top: 4rem;
-}
-
-.imgAdvantages {
-    padding-left: 1rem;
-    transform: scale(1.3);
-}
-
-.imgWrapper {}
 
 .value {
     display: flex;
@@ -75,10 +73,6 @@
     text-align: center;
 }
 
-.content.easyToImplement {
-    position: relative;
-    top: -1rem;
-}
 
 .content p,
 .value p {
@@ -91,31 +85,11 @@
         gap: 6rem;
     }
 
-    .easyToImplementImg {
-        padding-left: 3.5rem;
-        transform: scale(1.2);
-    }
-
-    .simpleUXImg {
-        padding-top: 0;
-        padding-left: 2rem;
-        transform: scale(.9);
-    }
-
     .valueSection h2 {
         font-size: 3rem;
         line-height: 3.5rem;
     }
 
-    .content.easyToImplement {
-        position: relative;
-        top: -3rem;
-    }
-
-    .content.simpleUX {
-        position: relative;
-        top: -5rem;
-    }
 
     .content p {
         max-width: 70%;
@@ -145,27 +119,16 @@
         text-align: left;
     }
 
-    .imgAdvantages {
-        transform: unset;
-    }
-
-    .easyToImplementImg {
-        padding-left: 0;
-        transform: unset;
-        padding-top: 0;
-    }
-
-    .simpleUXImg {
-        padding-left: 0;
-        transform: unset;
-    }
-
     .content {
         align-items: unset;
     }
 
     .value p {
         max-width: 70%;
+    }
+
+    .valueSection {
+        gap: 10rem;
     }
 
 }

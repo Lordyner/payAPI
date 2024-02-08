@@ -2,17 +2,16 @@ import React, { useContext } from 'react';
 import classes from './Values.module.css';
 import Image from 'next/image';
 import GlobalContext from '@/Store/GlobalContext';
-import easyToImplement from '@/public/images/home/desktop/illustration-easy-to-implement.svg';
-import simpleUi from '@/public/images/home/desktop/illustration-simple-ui.svg';
+
+import easyToImplement from '@/public/images/home/desktop/illustration_easy_to_use.PNG';
+import simpleUi from '@/public/images/home/desktop/illustration_simple_ui.png';
+
 import iconPersonalFinances from '@/public/images/home/desktop/icon-personal-finances.svg';
 import iconBankingAndCoverage from '@/public/images/home/desktop/icon-banking-and-coverage.svg';
 import iconConsumerPayments from '@/public/images/home/desktop/icon-consumer-payments.svg';
 import CTAReminder from './CTAReminder';
 
 const Values = () => {
-
-    const { isLaptopResolution } = useContext(GlobalContext);
-    const { isDesktopResolution } = useContext(GlobalContext);
 
     return (
         <section className={`${classes.valueSection} max-width`}>

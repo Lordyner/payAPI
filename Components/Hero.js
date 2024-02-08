@@ -5,10 +5,7 @@ import GlobalContext from '@/Store/GlobalContext';
 import heroImg from '@/public/images/home/desktop/illustration-phone-mockup.svg';
 
 const Hero = () => {
-    const { isMobileResolution } = useContext(GlobalContext);
-    const { isTabletResolution } = useContext(GlobalContext);
-    const { isLaptopResolution } = useContext(GlobalContext);
-    const { isDesktopResolution } = useContext(GlobalContext);
+
     return (
         <section id="hero" className={`${classes.heroContainer} max-width`}>
             <div className={classes.content}>
