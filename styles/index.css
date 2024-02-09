@@ -426,7 +426,9 @@ main {
     z-index: -1;
 } */
 
-
+.pricing {
+    padding-bottom: 2rem;
+}
 
 /* UTILS */
 
@@ -545,8 +547,12 @@ main {
     }
 
     .top-right-bg-circle::before {
-        top: -35rem;
-        width: 30vw;
+        top: -40rem;
+        width: 36vw;
+    }
+
+    .pricing {
+        padding-bottom: 4rem;
     }
 }
 
