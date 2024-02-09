@@ -13,6 +13,5 @@
 @media (min-width: 768px) {
     .clientsLogoWrapper {
         grid-template-columns: 1fr 1fr 1fr;
-        justify-items: flex-start;
     }
 }

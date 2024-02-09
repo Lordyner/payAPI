@@ -1,5 +1,5 @@
 .header {
-    padding: var(--topAndBotPadding) var(--sidePadding) 0 var(--sidePadding);
+    padding: 2.5rem var(--sidePadding) 0 var(--sidePadding);
     background-color: var(--background-color);
 }
 

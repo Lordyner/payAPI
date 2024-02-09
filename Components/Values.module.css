@@ -11,7 +11,7 @@
 .advantages {
     display: flex;
     flex-direction: column;
-    gap: 6rem;
+    gap: 5rem;
 }
 
 .advantage {
@@ -96,6 +96,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         align-items: start;
+        gap: 1rem;
     }
 
 
@@ -148,6 +149,11 @@
 
     .valueSection {
         gap: 10rem;
+    }
+
+    .values {
+
+        gap: 1rem;
     }
 
 }

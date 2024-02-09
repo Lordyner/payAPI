@@ -2,7 +2,8 @@ import React, { useContext, useRef } from 'react';
 import classes from './Hero.module.css';
 import Image from 'next/image';
 import GlobalContext from '@/Store/GlobalContext';
-import heroImg from '@/public/images/home/desktop/illustration-phone-mockup.svg';
+// import heroImg from '@/public/images/home/desktop/illustration-phone-mockup.svg';
+import heroImg from '@/public/images/home/desktop/illustration_phone_mockup.png';
 
 const Hero = () => {
 
