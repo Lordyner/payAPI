@@ -66,7 +66,7 @@ export default function AboutPage() {
             </Head>
             <div className={`overlay-burger-menu ${isMenuOpen ? 'isActive' : ''}`} />
             <Navbar />
-            <main>
+            <main className='top-right-bg-circle'>
                 <About />
                 <CTAReminder />
 

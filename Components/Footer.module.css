@@ -94,17 +94,24 @@
         position: absolute;
         top: 0;
         right: 0;
-        width: 100%;
+        left: unset;
+        width: 60vh;
         height: 100%;
         z-index: 1;
         background-image: url(/_next/static/media/bg-pattern-circle.96abc064.svg);
         background-repeat: no-repeat;
         background-position: unset;
-
     }
 
 }
 
 @media screen and (min-width: 1024px) {}
 
-@media screen and (min-width: 1440px) {}
+@media screen and (min-width: 1440px) {
+    .footer::before {
+
+        width: 45vh;
+
+    }
+
+}

@@ -149,6 +149,21 @@ body {
 
 }
 
+.top-right-bg-circle {
+    position: relative;
+}
+
+.top-right-bg-circle::before {
+    content: '';
+    position: absolute;
+    top: -46rem;
+    right: 0rem;
+    width: 74vw;
+    height: 100vh;
+    z-index: 1;
+    background-image: url(/_next/static/media/bg-pattern-circle.96abc064.svg);
+    background-repeat: no-repeat;
+}
 
 
 
@@ -524,13 +539,18 @@ main {
     background-color: #A0A0A0;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
     .bg-circle-home::before {
         background-position: center -56vh;
     }
+
+    .top-right-bg-circle::before {
+        top: -35rem;
+        width: 30vw;
+    }
 }
 
-@media (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
     .h-100 {
         min-height: 100vh;
     }
@@ -541,8 +561,13 @@ main {
 
 }
 
-@media (min-width: 1440px) {
+@media screen and (min-width: 1440px) {
     .bg-circle-home::before {
         background-position: 54vw -14vh;
+    }
+
+    .top-right-bg-circle::before {
+        top: -43rem;
+        width: 38vw;
     }
 }
