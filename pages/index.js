@@ -68,7 +68,7 @@ export default function Home({ reviews, mapBase64 }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={`overlay-burger-menu ${isMenuOpen ? 'isActive' : ''}`} />
-      <div className='d-flex f-col h-100'>
+      <div className='d-flex f-col'>
         <div className='bg-circle-home'> </div>
         <Navbar />
         <main className='d-flex flex-grow-2'>

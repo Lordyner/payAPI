@@ -183,7 +183,7 @@ a.link:hover {
     }
 
     .navWrapper {
-        padding-top: 2rem;
+        padding-top: 0;
         padding-bottom: 3rem;
     }
 }
@@ -192,7 +192,7 @@ a.link:hover {
 
 
     .navWrapper {
-        padding-top: 3rem;
+        padding-top: 0;
         padding-bottom: 3rem;
     }
 }
