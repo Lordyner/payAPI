@@ -13,8 +13,8 @@ const Navbar = () => {
     const { isMenuOpen, setIsMenuOpen } = useContext(GlobalContext);
     const { toggleMenu } = useContext(GlobalContext);
     return (
-        <header className={`${classes.header} max-width`}>
-            <nav className={classes.navbar}>
+        <header className={`${classes.header}`}>
+            <nav className={`${classes.navbar} max-width`}>
                 <div className={classes.navWrapper}>
                     <div className='d-flex gap-4 align-items-center'>
                         <div className={classes.logo}>
