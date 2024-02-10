@@ -52,7 +52,6 @@ export default function ContactPage() {
         // Handle loading spinner
         router.events.on("routeChangeStart", () => setIsLoading(true));
         router.events.on("routeChangeComplete", () => setIsLoading(false));
-        console.log()
     }, [screenWidth])
 
     return (
