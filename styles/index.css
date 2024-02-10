@@ -547,8 +547,10 @@ main {
     }
 
     .top-right-bg-circle::before {
-        top: -40rem;
-        width: 36vw;
+        top: -35rem;
+        width: 250px;
+
+
     }
 
     .pricing {
@@ -573,7 +575,9 @@ main {
     }
 
     .top-right-bg-circle::before {
+        overflow: hidden;
         top: -43rem;
-        width: 38vw;
+        width: 780px;
+        right: -10%;
     }
 }
