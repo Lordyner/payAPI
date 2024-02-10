@@ -13,9 +13,6 @@ import CTAReminder from './CTAReminder';
 
 const Values = () => {
 
-    const { isLaptopResolution } = useContext(GlobalContext);
-    const { isDesktopResolution } = useContext(GlobalContext);
-
     return (
         <section className={`${classes.valueSection} max-width`}>
             <div className={classes.advantages}>

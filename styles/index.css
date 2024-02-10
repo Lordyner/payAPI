@@ -9,6 +9,7 @@
     --secondary-color-4: hsl(337, 60%, 64%);
 
     --background-color: #edf3f8;
+
     /* Breakpoints */
     --desktop: 1440px;
     --laptop: 1040px;
@@ -25,25 +26,14 @@
     /* Padding */
     --sidePadding: 1.5rem;
     --topAndBotPadding: 4rem;
-    --circle-size: 60vw;
 }
 
 /* Titles */
 h1,
-h2,
-h4 {
+h2 {
     font-family: DMserifDisplayRegular;
     font-weight: normal;
-}
-
-h1 {
-    font-size: 3.5rem;
     color: var(--secondary-color-1);
-    line-height: 36px;
-}
-
-h2 {
-    font-size: 3rem;
 }
 
 h3 {
@@ -51,10 +41,6 @@ h3 {
     font-family: PublicSansRegular;
 }
 
-h4 {
-    font-size: 1.5rem;
-
-}
 
 @media screen and (min-width: 768px) {
     :root {
@@ -134,38 +120,6 @@ body {
     background-color: var(--background-color);
 
 }
-
-.bg-circle-home::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 1;
-    background-image: url('../public/images/shared/desktop/bg-pattern-circle.svg');
-    background-repeat: no-repeat;
-    background-position: center -64vh;
-
-}
-
-.top-right-bg-circle {
-    position: relative;
-}
-
-.top-right-bg-circle::before {
-    content: '';
-    position: absolute;
-    top: -46rem;
-    right: 0rem;
-    width: 74vw;
-    height: 780px;
-    z-index: 1;
-    background-image: url(/_next/static/media/bg-pattern-circle.96abc064.svg);
-    background-repeat: no-repeat;
-}
-
-
 
 
 /* STYLE */
@@ -394,35 +348,38 @@ main {
     background-color: var(--background-color);
 }
 
-.circle {
-    position: absolute;
-    width: 50vw;
-    /* Largeur du cercle en pourcentage de la largeur de la vue */
-    height: 50vw;
-    /* Hauteur du cercle en pourcentage de la largeur de la vue */
-    bottom: 0;
-    /* Position du bas */
-    left: 50%;
-    /* Position centrée horizontalement */
-    transform: translateX(-50%);
-    /* Décalage de moitié de la largeur du cercle vers la gauche pour le centrer */
-    z-index: -1;
-    /* Assurez-vous que le cercle est positionné derrière le contenu */
+.pricing {
+    padding-bottom: 2rem;
 }
 
-
-/* main.home::before {
+.bg-circle-home::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-} */
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    background-image: url('../public/images/shared/desktop/bg-pattern-circle.svg');
+    background-repeat: no-repeat;
+    background-position: center -64vh;
 
-.pricing {
-    padding-bottom: 2rem;
+}
+
+.top-right-bg-circle {
+    position: relative;
+}
+
+.top-right-bg-circle::before {
+    content: '';
+    position: absolute;
+    top: -46rem;
+    right: 0rem;
+    width: 74vw;
+    height: 780px;
+    z-index: 1;
+    background-image: url(/_next/static/media/bg-pattern-circle.96abc064.svg);
+    background-repeat: no-repeat;
 }
 
 /* UTILS */
@@ -539,6 +496,9 @@ main {
     border-radius: .5rem;
     background-color: #A0A0A0;
 }
+
+
+/* Media queries */
 
 @media screen and (min-width: 768px) {
     .bg-circle-home::before {

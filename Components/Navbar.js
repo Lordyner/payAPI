@@ -9,8 +9,7 @@ import Link from 'next/link';
 const Navbar = () => {
     const burger = useRef();
     const { isMobileResolution } = useContext(GlobalContext);
-    const { isTabletResolution } = useContext(GlobalContext);
-    const { isMenuOpen, setIsMenuOpen } = useContext(GlobalContext);
+    const { isMenuOpen } = useContext(GlobalContext);
     const { toggleMenu } = useContext(GlobalContext);
     return (
         <header className={`${classes.header}`}>

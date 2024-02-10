@@ -1,72 +1,12 @@
 import React, { useContext, useEffect, useRef, useState } from 'react';
-import { getLogger } from '../Logging/log-util';
 import classes from './Contact.module.css';
-import GlobalContext from '@/Store/GlobalContext';
-import Link from 'next/link';
-import Image from 'next/image';
+
 import ClientsLogo from './ClientsLogo';
 
 const Contact = () => {
-    const logger = getLogger('Contact');
 
     const form = useRef();
-
-    const [isDisabled, setIsDisabled] = useState(false);
     const [receiveCompanyAnnouncements, setReceiveCompanyAnnouncements] = useState(false);
-
-    const { setIsLoading } = useContext(GlobalContext);
-    const { setShowPopupConfirmation } = useContext(GlobalContext);
-    const { setShowPopupError } = useContext(GlobalContext);
-    const { setShowPopupContactFormIncorrect } = useContext(GlobalContext);
-    const { isLaptopResolution } = useContext(GlobalContext);
-    const { isDesktopResolution } = useContext(GlobalContext);
-
-    const sendEmail = (e) => {
-        e.preventDefault();
-        setIsDisabled(true);
-        setIsLoading(true);
-        const mail = {
-            name: form.current[0].value,
-            mailAdress: form.current[1].value,
-            message: form.current[2].value,
-        }
-        if (!mail.name || mail.name === ""
-            || !mail.mailAdress || mail.mailAdress === "" || !mail.mailAdress.includes === "@"
-            || !mail.message || mail.message === ""
-        ) {
-            logger.info('Formulaire envoie de mail non valide')
-            setIsLoading(false);
-            setShowPopupContactFormIncorrect(true);
-            setIsDisabled(false);
-            return;
-        }
-        fetch('/api/contact', {
-            method: 'POST',
-            body: JSON.stringify({
-                name: form.current[0].value,
-                mailAdress: form.current[1].value,
-                message: form.current[2].value,
-            }),
-            headers: { 'Content-Type': 'application/json' }
-
-        }).then(response => {
-            if (response.status === 201) {
-                setIsLoading(false);
-                setShowPopupConfirmation(true);
-                emptyForm();
-            } else {
-                setIsLoading(false);
-                setShowPopupError(true);
-
-            }
-        }).finally(() => setIsDisabled(false))
-    }
-
-    const emptyForm = () => {
-        form.current[0].value = "";
-        form.current[1].value = "";
-        form.current[2].value = "";
-    }
 
     return (
         <div className={classes.container}>

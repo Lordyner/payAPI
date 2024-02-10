@@ -3,8 +3,6 @@ import classes from './PriceOptions.module.css';
 
 const PriceOptions = ({ options }) => {
 
-
-
     return (
         <div className={classes.container}>
             <ul className={classes.options}>

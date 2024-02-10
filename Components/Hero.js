@@ -1,4 +1,4 @@
-import React, { useContext, useRef } from 'react';
+import React from 'react';
 import classes from './Hero.module.css';
 import Image from 'next/image';
 import heroImg from '@/public/images/home/desktop/illustration_phone_mockup.png';

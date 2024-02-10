@@ -4,7 +4,6 @@ import Image from 'next/image';
 import aboutImgDesktop from '@/public/images/about/desktop/image-team-members.jpg'
 import aboutImgTablet from '@/public/images/about/tablet/image-team-members.jpg'
 import aboutImgMobile from '@/public/images/about/mobile/image-team-members.jpg'
-import CTAReminder from './CTAReminder';
 import GlobalContext from '@/Store/GlobalContext';
 
 const About = () => {

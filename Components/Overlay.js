@@ -5,9 +5,6 @@ import GlobalContext from '@/Store/GlobalContext';
 const Overlay = () => {
 
     const { isLoading } = useContext(GlobalContext);
-    const { showPopupConfirmation, setShowPopupConfirmation } = useContext(GlobalContext);
-    const { showPopupError, setShowPopupError } = useContext(GlobalContext);
-    const { showPopupContactFormIncorrect, setShowPopupContactFormIncorrect } = useContext(GlobalContext);
 
     return (
         <div>

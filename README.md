@@ -39,7 +39,7 @@ Users should be able to:
 
 I started by analyzing the different design and look for things that I didn't know how to handle. I feel at ease with everything, except those circle background image and how to handle them responsivly. So I decided to keep it for the end.
 
-I created my next.js project and added the different colors, font-size and fields elements. Then I started the first page, section by section, mobile to desktop and top to bottom.
+I created my next.js project from a template that I developped and added the different colors, font-size and fields elements. Then I started the first page, section by section, mobile to desktop and top to bottom.
 
 After I did the same for the others pages : pricing, about, contact. Next I added the circle background image, struggle with it, ask help in the discord.
 

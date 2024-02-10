@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { SiFacebook, SiGithub, SiLinkedin, SiTwitter } from 'react-icons/si';
+import { SiFacebook, SiLinkedin, SiTwitter } from 'react-icons/si';
 import classes from './Footer.module.css';
 import logo from '@/public/images/shared/desktop/logo_white.svg';
 import Image from 'next/image';
@@ -8,7 +8,6 @@ import Link from 'next/link';
 
 const Footer = () => {
 
-    const { isMobileResolution } = useContext(GlobalContext)
     return (
         <footer className={`${classes.footer}`}>
             <div className={`${classes.wrapper} max-width`}>
