@@ -5,7 +5,6 @@
     min-height: 100svh;
     padding: var(--topAndBotPadding) var(--sidePadding);
     background-color: var(--background-color);
-    overflow-x: hidden;
 }
 
 .advantages {
@@ -118,9 +117,9 @@
     .bgCircle::before {
         content: '';
         position: absolute;
-        top: -40%;
-        right: -34rem;
-        width: 50vw;
+        top: -9rem;
+        right: -34.5625rem;
+        width: 48.75rem;
         height: 48.75rem;
         z-index: 1;
         background-image: url(/_next/static/media/bg-pattern-circle.96abc064.svg);

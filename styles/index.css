@@ -352,6 +352,10 @@ main {
     padding-bottom: 2rem;
 }
 
+.bg-circle-home {
+    position: relative;
+}
+
 .bg-circle-home::before {
     content: '';
     position: absolute;
@@ -363,7 +367,6 @@ main {
     background-image: url('../public/images/shared/desktop/bg-pattern-circle.svg');
     background-repeat: no-repeat;
     background-position: center -64vh;
-
 }
 
 .top-right-bg-circle {
@@ -374,9 +377,9 @@ main {
     content: '';
     position: absolute;
     top: -46rem;
-    right: 0rem;
-    width: 74vw;
-    height: 780px;
+    right: -33rem;
+    width: 48.75rem;
+    height: 48.75rem;
     z-index: 1;
     background-image: url(/_next/static/media/bg-pattern-circle.96abc064.svg);
     background-repeat: no-repeat;
@@ -478,6 +481,10 @@ main {
     min-height: 100svh;
 }
 
+.h-80 {
+    min-height: 80svh;
+}
+
 
 /* Scrollbar for chrome */
 ::-webkit-scrollbar {
@@ -502,14 +509,15 @@ main {
 
 @media screen and (min-width: 768px) {
     .bg-circle-home::before {
+
         background-position: center -56vh;
+
     }
 
     .top-right-bg-circle::before {
         top: -35rem;
-        width: 250px;
-
-
+        left: unset;
+        right: -31rem;
     }
 
     .pricing {
@@ -522,6 +530,10 @@ main {
         min-height: 100vh;
     }
 
+    .h-80 {
+        min-height: 80vh;
+    }
+
     main {
         padding: 0 var(--sidePadding);
     }
@@ -530,13 +542,17 @@ main {
 
 @media screen and (min-width: 1440px) {
     .bg-circle-home::before {
-        background-position: 54vw -14vh;
+        width: 48.75rem;
+        height: 48.75rem;
+        right: -4rem;
+        left: unset;
+        top: -11rem;
+        background-position: unset;
     }
 
     .top-right-bg-circle::before {
-        overflow: hidden;
         top: -43rem;
-        width: 608px;
-        right: 0;
+        left: unset;
+        right: -9rem;
     }
 }
