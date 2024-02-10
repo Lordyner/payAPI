@@ -273,11 +273,6 @@ textarea:active {
     opacity: 1;
 }
 
-input:invalid,
-textarea:invalid {
-    border-bottom: #FF0000;
-    color: #FF0000;
-}
 
 textarea {
     resize: none;
@@ -577,7 +572,7 @@ main {
     .top-right-bg-circle::before {
         overflow: hidden;
         top: -43rem;
-        width: 780px;
-        right: -10%;
+        width: 608px;
+        right: 0;
     }
 }

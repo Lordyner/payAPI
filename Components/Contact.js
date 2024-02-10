@@ -77,7 +77,7 @@ const Contact = () => {
                         <div className={classes.formGroup}>
                             <label htmlFor='name'>Name</label>
                             <input type='text' name='name' id='name' placeholder='Name' required />
-                            {/* <div className={classes.errorMessage}></div> */}
+                            <div className={classes.errorMessage}></div>
                         </div>
                         <div className={classes.formGroup}>
                             <label htmlFor='email'>Email Address</label>

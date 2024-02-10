@@ -20,9 +20,6 @@
     position: relative;
 }
 
-.formWrapper input:placeholder-shown {
-    border-bottom: 1px solid rgb(54, 83, 107, 0.5) !important;
-}
 
 .formWrapper input,
 .formWrapper textarea {
@@ -49,8 +46,8 @@
     padding-left: 1rem;
 }
 
-.formWrapper input:invalid,
-.formWrapper textarea:invalid {
+.formWrapper input:invalid input:not(:placeholder-shown),
+.formWrapper textarea:invalid textarea:not(:placeholder-shown) {
     border-color: #FF0000;
 }
 
