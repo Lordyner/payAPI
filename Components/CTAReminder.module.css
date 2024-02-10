@@ -85,7 +85,6 @@
         flex-direction: row;
         justify-content: space-between;
         margin: unset;
-        padding-bottom: 3rem;
     }
 
     .component {

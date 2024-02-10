@@ -55,7 +55,7 @@ const Values = () => {
                     <p>It&apos;s easier to set up secure bank payments with us through a flow designed with the user experience in mind. Customers could instantly verify their account.</p>
                 </div>
             </div>
-            <CTAReminder />
+            <CTAReminder padding='p-0' />
         </section>
     );
 };

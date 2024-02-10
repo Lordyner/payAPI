@@ -6,7 +6,7 @@
 
     text-align: center;
     padding-top: 2rem;
-    padding-bottom: 4rem;
+
 }
 
 .container img {
@@ -106,6 +106,10 @@
 }
 
 @media screen and (min-width: 1440px) {
+
+    .container {
+        padding-bottom: 2rem;
+    }
 
     .container h1 {
         text-align: left;
