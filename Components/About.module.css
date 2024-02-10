@@ -12,6 +12,10 @@
 .container img {
     object-fit: cover;
     max-width: none;
+    width: 100%;
+}
+
+.imgWrapper {
     width: calc(100% + (2*var(--sidePadding)));
 }
 
@@ -113,5 +117,26 @@
 
     .aboutInfo {
         max-width: 70%;
+    }
+
+    .imgWrapper img {
+        position: relative;
+        z-index: 2;
+    }
+
+    .imgWrapper {
+        position: relative;
+    }
+
+    .imgWrapper::before {
+        content: '';
+        position: absolute;
+        top: -25%;
+        left: -500px;
+        width: 780px;
+        height: 780px;
+        background-image: url(/_next/static/media/bg-pattern-circle.96abc064.svg);
+        background-repeat: no-repeat;
+        z-index: 1;
     }
 }

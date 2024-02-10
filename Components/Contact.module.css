@@ -197,6 +197,10 @@
         justify-items: center;
     }
 
+    .formWrapper form {
+        max-width: 60%;
+    }
+
     .container {}
 
     .container h1 {
@@ -225,6 +229,10 @@
 
     .formWrapper {
         justify-items: flex-start;
+    }
+
+    .formWrapper form {
+        max-width: 90%;
     }
 
     .clients {

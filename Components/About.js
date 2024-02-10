@@ -24,10 +24,11 @@ const About = () => {
                 <h2>Our business</h2>
                 <p> At the core of our platform is the technical infrastructure APIs that connect consumers. Our innovative product provides key insights for businesses and individuals, as well as robust reporting for traditional financial institutions and developers. </p>
             </div>
-            {isMobileResolution && <Image src={aboutImgMobile} alt='team members' />}
-            {(isTabletResolution || isLaptopResolution) && <Image src={aboutImgTablet} alt='team members' />}
-            {isDesktopResolution && <Image src={aboutImgDesktop} alt='team members' />}
-
+            <div className={classes.imgWrapper}>
+                {isMobileResolution && <Image src={aboutImgMobile} alt='team members' />}
+                {(isTabletResolution || isLaptopResolution) && <Image src={aboutImgTablet} alt='team members' />}
+                {isDesktopResolution && <Image src={aboutImgDesktop} alt='team members' />}
+            </div>
             <div className={`${classes.numbers}`}>
                 <div className={`${classes.wrapper} max-width`}>
                     <div className={classes.number}>
