@@ -32,7 +32,7 @@
 
     .pricingSection {
 
-        padding: 3rem 0 6rem 0;
+        padding: 3rem 0 2rem 0;
 
     }
 
@@ -44,6 +44,12 @@
     .pricingSection h1 {
         font-size: var(--heading-800);
         text-align: left;
+
+    }
+
+    .pricingSection {
+
+        padding: 3rem 0 4rem 0;
 
     }
 }
