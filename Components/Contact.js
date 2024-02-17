@@ -9,7 +9,7 @@ const Contact = () => {
     const [receiveCompanyAnnouncements, setReceiveCompanyAnnouncements] = useState(false);
 
     return (
-        <div className={classes.container}>
+        <div className={`${classes.container} max-width`}>
             <div className={classes.formWrapper}>
                 <h1>Submit a help request and we’ll get in touch shortly.</h1>
                 <form ref={form} className={classes.form}>

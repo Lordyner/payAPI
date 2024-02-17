@@ -376,9 +376,9 @@ main {
 .top-right-bg-circle::before {
     content: '';
     position: absolute;
-    top: -46rem;
-    right: -33rem;
-    width: 48.75rem;
+    top: -44rem;
+    right: 0;
+    width: 13rem;
     height: 48.75rem;
     z-index: 1;
     background-image: url(/_next/static/media/bg-pattern-circle.96abc064.svg);
@@ -515,9 +515,9 @@ main {
     }
 
     .top-right-bg-circle::before {
-        top: -35rem;
-        left: unset;
-        right: -31rem;
+        top: -36rem;
+        right: 0;
+        width: 15.625rem;
     }
 
     .pricing {
@@ -551,8 +551,8 @@ main {
     }
 
     .top-right-bg-circle::before {
-        top: -43rem;
-        left: unset;
-        right: -9rem;
+        top: -42rem;
+        right: 0;
+        width: 39.313rem;
     }
 }

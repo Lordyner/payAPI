@@ -1,9 +1,9 @@
 import React from 'react';
 import classes from './CTAReminder.module.css';
 
-const CTAReminder = ({ padding }) => {
+const CTAReminder = ({ padding, maxWidth }) => {
     return (
-        <div className={`${classes.callToAction} ${padding}`}>
+        <div className={`${classes.callToAction} ${padding} ${maxWidth ? 'max-width' : ''}`}>
             <div className={classes.wrapper}>
                 <h2>Ready to start?</h2>
                 <div className={classes.component}>

@@ -9,7 +9,7 @@ const Pricing = () => {
     let premiumOptions = [{ name: 'Transactions', active: true }, { name: 'Auth', active: true }, { name: 'Identity', active: true }, { name: 'Investments', active: true }, { name: 'Assets', active: true }, { name: 'Liabilities', active: true }, { name: 'Income', active: true }]
 
     return (
-        <section className={classes.pricingSection}>
+        <section className={`${classes.pricingSection} max-width`}>
 
             <h1>Pricing</h1>
             <div className={classes.planContainer}>
